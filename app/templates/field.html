@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{{ super() }}
+<h1 class="subtitle">{{ field.name }}</h1>
+<br>
+<a href="/field_of_study/{{ field.url_alias }}/add_note">Add a Note</a>
+<table>
+    {% for note in field.notes %}
+    <tr>
+        <td class="what">{{ note.what }}</td>
+        <td class="subsubtitle">{{ note.definition }}</td>
+        <td><a href="/field_of_study/{{ field.url_alias }}/update_note/{{ note.id }}">MODIFY</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

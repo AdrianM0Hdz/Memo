@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{{ super() }}
+<h1 class="subtitle">Add a note of the field {{ field.name }}</h1>
+<form id="add-note" method="POST" action="/field_of_study/{{ field.url_alias }}/add_note">
+    <input type="name" placeholder="Something" name="what"><br>
+    <textarea placeholder="The definition of that 'Something'" name="definition" cols="100" rows="20"></textarea><br>
+    <input type="submit" value="SUBMIT"><br>
+</form>
+<a href="/field_of_study/{{ field.url_alias }}">RETURN TO FIELD OF STUDY</a>
+{% endblock %}

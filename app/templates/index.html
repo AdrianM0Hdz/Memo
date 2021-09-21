@@ -1,3 +1,32 @@
 {% extends 'base.html' %}
 
-{% %}
+{% block title %}Main Page{% endblock %}
+
+{% block head %} 
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+{{ super() }}
+<br>
+<h1 class="subtitle">Fields of Study</h1>
+<form method="POST" action="/add_field_of_study">
+    <input type="name" placeholder="name of field" id="name_of_field" name="name_of_field">
+    <input type="submit" value="add field of study">
+</form> 
+<table>
+    {% for field in fields %}
+    <tr class="subsubtitle">
+            <td> 
+                <a class="subsubtitle" href="field_of_study/{{ field.url_alias }}">{{ field.name }}</a> 
+            </td>
+            <td>
+            <form method="POST" action="/delete_field_of_study"> 
+                <input type="hidden" name="name_of_field" value="{{ field.name }}">
+                <input type="submit" value="DELETE">
+            </form>
+            </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,62 @@
+body {
+    background-color: #121212;
+    font-family: sans-serif;
+}
+
+body #page-title{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 55px;
+}
+
+body header {
+    background-color: #282828;
+    height: 80px;
+}
+
+body nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+    background-color: #282828;
+}
+
+body nav li#left{
+    float: left;
+    background-color: #282828;
+}
+
+body li a {
+    background-color: #282828;
+    display: inline-block;
+    color: white; 
+    text-align: center;
+    padding: 40px 16px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+body a:hover {
+    background-color:yellowgreen;
+    font-size: 30px;
+}
+
+body .subtitle {
+    color: white;
+    font-size: 40px;
+}
+
+body .subsubtitle {
+    color: white;
+    font-size: 30px;
+}
+
+body .what {
+    font-size: 30px;
+    color: blue;
+}
+
+body #definition {
+    display: none;
+}

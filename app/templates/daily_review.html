@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Todays Review{% endblock %}
+
+{% block body %}
+{{ super() }}
+{% for note in notes %}
+<br>
+<h1 class="what">{{ note.what }}</h1>
+<h5 class="subsubtitle" id="definition">{{ note.definition}} </h5>
+<button type="button" id="show-answer">SHOW ANSWER</button>
+<br>
+{% endfor %}
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
